@@ -4,14 +4,6 @@
   tasks:
   - name: install open jdk 
     apt:
-     name: "{{myjavapackonubuntu}}"
-     state: present
-  - name: start service
-    service:
-     name: "{{myjavapackonubuntu}}"
-     state: started
-     
-
-
-
-  
+      name: "{{myjavapackonubuntu}}"
+      state: present
+    when: ansible_os_family =="Debian"
