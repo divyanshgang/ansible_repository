@@ -1,0 +1,11 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+  - name: install open jdk 
+    apt:
+     name: "{{myjavapackonubuntu}}"
+     state: present
+
+
+  
