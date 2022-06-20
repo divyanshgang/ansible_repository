@@ -6,6 +6,12 @@
     apt:
      name: "{{myjavapackonubuntu}}"
      state: present
+  - name: start service
+    service:
+     name: "{{myjavapackonubuntu}}"
+     state: started
+     
+
 
 
   
