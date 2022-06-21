@@ -1,0 +1,11 @@
+---
+- hosts: 172.31.81.192
+  become: yes
+  tasks:
+  - name: Execute Linux Command
+    command: hostname -f
+    register: task1result
+
+  - name: show o/p of first task on console
+    debug:
+    msg: "{{task1result}}"
