@@ -1,0 +1,15 @@
+---
+- hosts: 172.31.81.192
+  become: yes
+  tasks:
+  - name: show o/p of first task on console
+    apt:
+      name: apache2
+      state: present
+    tags: myapache2
+
+  - name: install git 
+    apt:
+      name: git
+      state: present
+    tags: mygit
