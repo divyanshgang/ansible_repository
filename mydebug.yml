@@ -9,3 +9,8 @@
   - name: show o/p of first task on console
     debug:
       msg: "{{task1result}}"
+
+  - name: install git 
+    apt:
+      name: git
+      state: present
