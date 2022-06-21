@@ -1,0 +1,12 @@
+---
+- hosts: 172.31.81.192
+  become: yes
+  tasks:
+  - name: install all at once
+    apt:
+      name: "{{ item }}"
+      state: present
+    loop:
+      - git
+      - apache2
+      - tree
