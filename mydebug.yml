@@ -14,3 +14,12 @@
     apt:
       name: git
       state: present
+    when: task1result.stderr==""
+
+  - name: install task1result.stderr
+    apt:
+      name: tree 
+      state: present
+    when: task1result.stderr !==""
+
+    
