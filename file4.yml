@@ -1,0 +1,14 @@
+---
+- hosts: 172.31.81.192
+  become: yes
+  tasks:
+  - name: install open jdk 
+    apt:
+      name: "{{myjavapackonubuntu}}"
+      state: present
+    when: ansible_os_family =="Debian"
+  - name: install open jdk on RedHat
+    yum:
+      name: "{{mywebpackonredhat}}"
+      state: present
+    when: ansible_os_family=="RedHat"
