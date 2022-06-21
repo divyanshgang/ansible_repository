@@ -8,4 +8,4 @@
 
   - name: show o/p of first task on console
     debug:
-    msg: "{{task1result}}"
+      msg: "{{task1result}}"
