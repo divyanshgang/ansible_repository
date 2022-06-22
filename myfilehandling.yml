@@ -29,6 +29,6 @@
   
   handlers:
   - name: restartwebserver
-    service:
+    systemd:
        name: apache2
        state: restarted
