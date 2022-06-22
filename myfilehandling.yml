@@ -13,3 +13,8 @@
     apt:
       name: apache2
       state: present
+
+  - name: copy dunamic file from node to master nodes
+    template: 
+       src: dymanicfile.j2
+       dest: /var/www/html/index.html
