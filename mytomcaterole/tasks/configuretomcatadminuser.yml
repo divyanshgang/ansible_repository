@@ -1,0 +1,15 @@
+---
+- name: I want to copy tomcat-user XML file into nodes 
+  template:
+    src: template/mytomuser.j2
+    dest:  /opt/tomcat/conf/tomcat-users.xml
+
+- name: Remove restriction for the manager
+  template:
+    src: template/managerrestriction.j2
+    dest: /opt/tomcat/webapps/manager/META-INF/context.xml
+
+- name: Tomcat host user
+  template:
+    src: template/tomcathost.j2
+    dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml

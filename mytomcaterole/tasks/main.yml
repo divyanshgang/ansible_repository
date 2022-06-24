@@ -1,4 +1,5 @@
 ---
+- tasks:
 # tasks file for mytomcaterole
 - include_tasks: myuser.yml
 - include_tasks: installjava.yml
