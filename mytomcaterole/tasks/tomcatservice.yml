@@ -1,0 +1,17 @@
+---
+- name: Tomcat Service
+  template:
+    src: template/tomcatservice.j2
+    dest: /etc/systemd/system/tomcat.service
+
+- name: System Daemon
+  command: sudo systemctl daemon-reload
+
+- name: System Start
+  command: sudo systemctl start tomcat
+
+- name: System Status
+  command: sudo systemctl stop tomcat
+
+- name: Enable Status
+  command: sudo systemctl enable tomcat
